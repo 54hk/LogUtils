@@ -14,5 +14,8 @@ import com.page.android.R;
  */
 
 public class GlideUtils {
+    public static void load(Context context, String url, ImageView imageView) {
+        Glide.with(context).load(url).into(imageView);
 
+    }
 }

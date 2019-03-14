@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimaryDark"
+    android:paddingBottom="8dp">
+
+
+    <ImageView
+        android:id="@+id/iv_open_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="23dp"
+        android:src="@mipmap/home_open_close" />
+
+    <RelativeLayout
+        android:id="@+id/search_bar_1_on_search"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_toLeftOf="@+id/iv_add"
+        android:layout_toRightOf="@+id/iv_open_close"
+        android:background="@drawable/home_search"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/home_search"
+            android:gravity="left" />
+
+        <TextView
+            android:id="@+id/search_text_1_on_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@+id/img_title_right"
+            android:text="搜索"
+            android:textColor="#8ee3fc"
+            android:textSize="36px" />
+
+        <ImageView
+            android:id="@+id/img_title_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:src="@mipmap/home_search" />
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="23dp"
+        android:src="@mipmap/home_add" />
+
+</RelativeLayout>

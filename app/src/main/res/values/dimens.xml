@@ -6,14 +6,19 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
-
+    <dimen name="margin_10">10dp</dimen>
     <dimen name="text_42px">42px</dimen>
     <dimen name="text_40px">40px</dimen>
     <dimen name="text_20">20px</dimen>
+    <dimen name="text_15">15dp</dimen>
     <dimen name="margin_40dp">40dp</dimen>
-
+    <dimen name="margin_5">5dp</dimen>
+    <dimen name="marigin_4">4dp</dimen>
+    <dimen name="margin_2">2dp</dimen>
     <dimen name="margin_20dp">20dp</dimen>
+    <dimen name="margin_30dp">30dp</dimen>
     <dimen name="margin_28dp">28dp</dimen>
+    <dimen name="margin_8dp">8dp</dimen>
     <!-- 侧滑图标与文字间距 -->
     <dimen name="design_navigation_icon_padding" tools:override="true">35dp</dimen>
     <dimen name="design_navigation_icon_size" tools:override="true">32dp</dimen>

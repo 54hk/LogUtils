@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/content_main"
@@ -8,70 +8,195 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/app_bar_main">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryDark">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/conent_main_top" />
+
+
+        <include layout="@layout/content_four_icon" />
+
+
+        <include layout="@layout/content_eight_icon" />
 
         <ImageView
-            android:id="@+id/iv_open_close"
-            android:layout_width="23dp"
-            android:layout_height="15dp"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="28dp"
-            android:src="@mipmap/home_open_close" />
-
-        <RelativeLayout
-            android:id="@+id/search_bar_1_on_search"
             android:layout_width="match_parent"
-            android:layout_height="27dp"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="21dp"
-            android:layout_marginRight="21dp"
-            android:layout_toLeftOf="@+id/iv_add"
-            android:layout_toRightOf="@+id/iv_open_close"
-            android:background="@drawable/home_search"
-            android:visibility="visible">
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@mipmap/line" />
+
+        <!--轮播图-->
+
+        <com.youth.banner.Banner
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:is_auto_play="false">
+
+
+        </com.youth.banner.Banner>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@mipmap/line" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon_bottom1" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/line" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_bottom2" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@mipmap/line" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@mipmap/icon_bottom3" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/home_search"
-                android:gravity="left" />
+                android:layout_height="50dp">
 
-            <TextView
-                android:id="@+id/search_text_1_on_search"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@+id/img_title_right"
-                android:text="搜索"
-                android:textColor="#8ee3fc"
-                android:textSize="25px" />
+                <TextView
+                    android:id="@+id/tv_phone_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_20dp"
+                    android:text="手机号码"
+                    android:textSize="17sp" />
 
-            <ImageView
-                android:id="@+id/img_title_right"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="18dp"
-                android:src="@mipmap/home_search" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_20dp"
+                    android:layout_toLeftOf="@+id/iv_phone_number"
+                    android:layout_toRightOf="@+id/tv_phone_number"
+                    android:background="@null"
+                    android:hint="请输入充值手机号码"
+                    android:textSize="19sp" />
 
-        </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/iv_phone_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@mipmap/user_phone" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@mipmap/one" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@mipmap/fity" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@mipmap/three" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@mipmap/fif" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@mipmap/line" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_bottom4" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/line" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_bottom5" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/line" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_bottom6" />
 
 
         <ImageView
-            android:id="@+id/iv_add"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="28dp"
-            android:src="@mipmap/home_add" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_bottom7" />
 
-
-    </RelativeLayout>
-
-
-</RelativeLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/line" />
+    </LinearLayout>
+</ScrollView>
