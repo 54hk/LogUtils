@@ -96,7 +96,7 @@ public class WindowActivity extends AppCompatActivity implements View.OnClickLis
                 tvYue.setTextColor(getResources().getColor(R.color.color_666666));
                 tvDangtian.setTextColor(getResources().getColor(R.color.color_08b7f3));
 
-                tvSelectTime.setText("(" + AppUtils.timeStamp2Date(AppUtils.getLongTime(0) + "", "yyyy/MM/dd") + ")");
+                tvSelectTime.setText("(" + AppUtils.timeStamp2Date(AppUtils.getLongTime(0) + "", "yyyy/MM/dd")+" - "+AppUtils.timeStamp2Date(AppUtils.getLongTime(0) + "", "yyyy/MM/dd") + ")");
                 break;
             case R.id.rl_two://一个月
                 tvOne.setVisibility(View.INVISIBLE);
